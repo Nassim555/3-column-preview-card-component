@@ -1,0 +1,118 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+:root {
+  //  Primary
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+
+  //  Neutral
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray: hsl(0, 0%, 95%);
+}
+html {
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  font-family: "Lexend Deca", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Very-light-gray);
+  color: var(--Transparent-white);
+  font-size: 0.9375rem;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+/* main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+} */
+
+.cards-wrapper {
+  width: 85%;
+  margin: 5em auto;
+  border-radius: 0.7em;
+  overflow: hidden;
+  max-width: 600px;
+  @media (min-width: 850px) {
+    display: flex;
+    max-width: 1200px;
+  }
+}
+
+.card {
+  padding: 3em;
+  &__icon {
+    margin-bottom: 2em;
+  }
+  &--yellow {
+    background-color: var(--Bright-orange);
+    .btn {
+      color: var(--Bright-orange);
+    }
+  }
+  &--green {
+    background-color: var(--Dark-cyan);
+    .btn {
+      color: var(--Dark-cyan);
+    }
+  }
+  &--dark-green {
+    background-color: var(--Very-dark-cyan);
+    .btn {
+      color: var(--Very-dark-cyan);
+    }
+  }
+  &__title {
+    font-family: "Big Shoulders Display", cursive;
+    color: var(--Very-light-gray);
+    font-size: 2.5em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  &__text {
+    line-height: 1.7;
+    letter-spacing: 0.6px;
+    margin-bottom: 1.5em;
+  }
+  &__content {
+    @media (min-width: 850px) {
+      margin-bottom: 5em;
+    }
+  }
+  .btn {
+    padding: 1em 2em;
+    background-color: var(--Very-light-gray);
+    border: none;
+    border-radius: 5em;
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 0.9375rem;
+    border: 3px var(--Very-light-gray) solid;
+    transition: all 200ms ease-in-out;
+    cursor: pointer;
+    &:hover {
+      background-color: transparent;
+      color: var(--Very-light-gray);
+    }
+  }
+}
+
+.attribution {
+  margin-top: auto;
+  font-size: 11px;
+  text-align: center;
+  color: var(--Dark-cyan);
+  a {
+    color: var(--Bright-orange);
+  }
+}
