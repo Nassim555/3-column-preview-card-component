@@ -32,11 +32,9 @@ img {
   display: block;
   max-width: 100%;
 }
-/* main {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-} */
+main {
+  height: 100vh;
+}
 
 .cards-wrapper {
   width: 85%;
@@ -47,6 +45,7 @@ img {
   @media (min-width: 850px) {
     display: flex;
     max-width: 1200px;
+    margin: 4em auto;
   }
 }
 
